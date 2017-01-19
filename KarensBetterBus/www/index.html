@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0;" />
+<!--
+    <link rel="stylesheet" type="text/css" href="appframework/af.ui.css" />
+    <link rel="stylesheet" type="text/css" href="appframework/icons.css" />
+-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" charset="utf-8" src="appframework/appframework.ui.min.js"></script>
+ 
+    <!-- phantom library, needed for XDK "legacy" container api calls -->
+    <script src="intelxdk.js"></script>
+    <!-- phantom library, needed for Cordova api calls -->
+    <script src="cordova.js"></script>
+    <!-- phantom library, needed for XDK "legacy" container CORS -->
+    <script src="xhr.js"></script>
+    
+    <script type="text/javascript" charset="utf-8" src="js/utils.js"></script> 
+    <script type="text/javascript" charset="utf-8" src="js/busdata.js"></script> 
+    <script type="text/javascript" charset="utf-8" src="js/busmetadata.js"></script> 
+    <script type="text/javascript" charset="utf-8" src="js/stopdata.js"></script> 
+    <script type="text/javascript" charset="utf-8" src="js/geolocationcallback.js"></script> 
+    <script type="text/javascript" charset="utf-8" src="js/map.js"></script> 
+    <script type="text/javascript" charset="utf-8" src="js/tflquery.js"></script> 
+    <script type="text/javascript" charset="utf-8" src="js/tflquerycallback.js"></script> 
+
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCfRwrDsMlnrdkrGzRQ_iEJ6twQEz-QYh0&sensor=true"></script>
+
+    <script>
+        var onDeviceReady=function(){                             // called when Cordova is ready
+           if( window.Cordova && navigator.splashscreen ) {     // Cordova API detected
+               navigator.geolocation.getCurrentPosition(locationSuccess, locationError, coarseOptions);
+               navigator.geolocation.watchPosition(locationSuccess, locationError, options);
+               $.ui.launch(); 
+               navigator.splashscreen.hide() ;                 // hide splash screen
+               setTimeout(sendStopFavouriteRequest(), 250);
+            }
+        } ;
+        document.addEventListener("deviceready", onDeviceReady, false) ;
+    </script>
+    
+<!--
+    <script>   
+        $.ui.autoLaunch = false;        
+                
+        $(document).ready(function(){
+            $.ui.launch();
+        });
+    </script>  
+-->
+</head>
+<body> 
+<div>
+    <div id="content">
+        <div id="header_canvas_splitter" style="width:100%">
+            <table style="width:100%;padding:0px;margin:0px"><tr><td><hr/></td></tr></table>
+        </div>
+        <div id="header_canvas" style="width:100%;height:25px;visibility:collapse;"></div>
+        <div id="bus_canvas" style="width:100%;overflow-x:hidden;overflow-y:scroll;"></div>
+        <div id="map_canvas_splitter" style="width:100%">
+            <table style="width:100%;padding:0px;margin:0px"><tr><td><hr/></td></tr></table>
+        </div>
+        <div id="map_canvas" style="width:100%;height:120px"></div>
+    </div>
+
+    <div id="navbar">
+        <table style="width:100%;padding:0px;margin:0px">
+            <tr><td colspan="4"><hr/></td></tr>
+            <tr><td colspan="4" align="center" class="copyright">Data provided by Transport for London</td></tr>
+            <tr><td colspan="4"><hr/></td></tr>
+            <tr style="height:55px">			
+                <td align="center"><button style="width:70px;height:45px" onClick="sendStopRadiusRequest(400);">Stops</button></td>
+                <td align="center"><button style="width:70px;height:45px" onClick="sendBusRadiusRequest(400);">Buses</button></td>
+                <td align="center"><button style="width:80px;height:45px" onClick="sendStopFavouriteRequest();">Favourites</button></td>
+                <td align="center"><button style="width:80px;height:45px" id="show_map_button" onClick="toggleShowMap();">Show map</button></td>
+            </tr>
+        </table>
+    </div>
+    </div>
+</body>
+</html>    

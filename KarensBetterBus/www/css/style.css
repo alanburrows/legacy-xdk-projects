@@ -1,0 +1,91 @@
+    /* Prevent copy paste for all elements except text fields */
+    *  { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); }
+    input, textarea  { -webkit-user-select:text; }
+	
+	img { border:none; } /* Remove default borders for images */
+    
+	body {
+		overflow-x:hidden;
+		-webkit-text-size-adjust:none;
+        background-color:#fff;
+        color:#000;
+        font-family:Tahoma,Arial;
+        font-size:10pt;
+        margin:0px;padding:0px;
+		display:-webkit-box; /* We want to layout our first container vertically */
+		-webkit-box-orient:vertical; /* we want our child elements to stretch to fit the container */
+		-webkit-box-align:stretch;	
+	}
+		
+	div {
+        color:#000;
+        font-family:Tahoma,Arial;
+        font-size:10pt;
+	}
+
+	button {
+		background-color:#3B5998;
+        color:#fff;
+        font-family:Tahoma,Arial;
+        font-size:10pt;
+		margin:0px;
+	}
+	
+	hr {
+		background-color:#3B5998;
+		color:#3B5998;
+		size:2px;
+		margin:0px;
+	}
+	
+	table {
+		border-collapse: collapse;
+		border:0px		
+	}
+		
+	tr:nth-child(even) {
+		background-color: #ffffff;
+	}
+	tr:nth-child(odd) {
+		background-color: #ddddff;
+	}	
+	
+	.copyright {
+        font-family:Tahoma,Arial;
+        font-size:8pt;
+	}
+
+	.subText {
+        font-family:Tahoma,Arial;
+        font-size:8pt;
+	}
+	
+	#header_canvas tr {
+		background-color:#3B5998;
+        color:#fff;
+        font-family:Tahoma,Arial;
+        font-size:10pt;
+		margin:0px;
+		text-align:center;
+		vertical-align:middle;
+		height:25px;
+	}
+	
+	#content {
+		z-index:180;
+		display:block;
+		position:absolute;
+		top:0px;
+		bottom:90px;
+		left:0px;right:0px;
+		overflow:hidden;		
+	}
+	
+	#navbar {
+		position:absolute;
+		bottom:0px;
+		z-index:1000;
+		text-align:center;
+		left:0px;right:0px;
+		height:90px; padding:0px 1px;
+	}

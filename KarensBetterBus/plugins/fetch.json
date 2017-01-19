@@ -1,0 +1,38 @@
+{
+    "intel.xdk.cache": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/01org/cordova-plugin-intel-xdk-cache.git",
+            "subdir": ".",
+            "ref": "r1.2.3"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-splashscreen": {
+        "source": {
+            "type": "local",
+            "path": "C:\\Users\\alanb\\AppData\\Local\\Intel\\XDK\\xdk\\components\\server\\cordova-plugins\\cordova-plugin-splashscreen"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-geolocation": {
+        "source": {
+            "type": "local",
+            "path": "C:\\Users\\alanb\\AppData\\Local\\Intel\\XDK\\xdk\\components\\server\\cordova-plugins\\cordova-plugin-geolocation"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "intel.xdk.device": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/01org/cordova-plugin-intel-xdk-device.git",
+            "subdir": ".",
+            "ref": "r2.0.1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

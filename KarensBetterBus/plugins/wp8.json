@@ -1,0 +1,16 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "intel.xdk.cache": {},
+        "cordova-plugin-splashscreen": {},
+        "cordova-plugin-geolocation": {},
+        "intel.xdk.device": {}
+    },
+    "dependent_plugins": {}
+}

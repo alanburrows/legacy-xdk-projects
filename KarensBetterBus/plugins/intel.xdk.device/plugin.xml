@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2015 Intel Corporation
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file 
+except in compliance with the License. You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the 
+License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, 
+either express or implied. See the License for the specific language governing permissions 
+and limitations under the License
+-->
+
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="intel.xdk.device"
+    version="2.0.1">
+    <name>Intel XDK Device</name>
+    <description>Intel XDK Device Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>Intel XDK, intel.xdk, device</keywords>
+    <repo>https://github.com/01org/cordova-plugin-intel-xdk-device.git</repo>
+    <issue></issue>
+
+    <js-module src="www/device.js" name="device">
+        <merges target="intel.xdk.device" />
+    </js-module>
+
+    <js-module src="www/RemoteDataParameters.js" name="device-RemoteDataParameters">
+        <merges target="intel.xdk.device"/>
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <js-module src="www/android/device.js" name="android-device">
+            <merges target="intel.xdk.device" />
+        </js-module>
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="IntelXDKDevice" >
+                <param name="android-package" value="com.intel.xdk.device.Device"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <supports-screens
+                android:xlargeScreens="true"
+                android:largeScreens="true"
+                android:normalScreens="true"
+                android:smallScreens="true"
+                android:anyDensity="true" 
+            />
+            <uses-feature android:name="android.hardware.screen.portrait" android:required="false" />
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+            <uses-permission android:name="android.permission.WAKE_LOCK" />
+        </config-file>
+        <source-file src="src/android/Device.java" target-dir="src/com/intel/xdk/device" />
+        <source-file src="src/android/remote_close.png" target-dir="res/drawable-xhdpi"/>
+    </platform>
+
+    <!-- Windows Phone 8 -->
+    <platform name="wp8">
+        <!-- placeholder for overriding wp8-specific props -->
+        <js-module src="www/wp8/device.js" name="device-wp8">
+            <merges target="intel.xdk" />
+        </js-module>
+
+        <source-file src="src/wp8/Device.cs" target-dir="" />
+        <source-file src="src/wp8/IntelCookieJar.cs" target-dir="" />
+
+        <source-file src="src/wp8/zxing.wp8.0.dll" target-dir="" />
+
+        <source-file src="src/wp8/UI/BarCodeControl.xaml" target-dir="UI" />
+        <source-file src="src/wp8/UI/BarCodeControl.xaml.cs" target-dir="UI" />
+        <source-file src="src/wp8/UI/PhotoCameraLuminanceSource.cs" target-dir="UI" />
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="IntelXDKDevice">
+                <param name="wp-package" value="IntelXDKDevice" />
+            </feature>
+        </config-file>
+
+        <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
+            <Capability Name="ID_CAP_IDENTITY_DEVICE"/>
+            <Capability Name="ID_CAP_ISV_CAMERA" />
+        </config-file>
+
+        <source-file src="src/windows8/remote_close.png" target-dir="../../Images"/>
+    </platform>
+
+    <!-- Windows -->
+    <platform name="windows">
+        <js-module src="src/windows8/deviceProxy.js" name="deviceProxy">
+            <clobbers target=""></clobbers>
+        </js-module>
+        
+        <source-file src="src/windows8/remote_close.png" />
+    </platform>
+
+    <!-- Windows8 -->
+    <platform name="windows8">
+        <js-module src="src/windows8/deviceProxy.js" name="deviceProxy">
+            <clobbers target=""></clobbers>
+        </js-module>
+        
+        <source-file src="src/windows8/remote_close.png" target-dir="../../img"/>
+    </platform>
+
+    <!-- iOS -->
+    <platform name="ios">
+
+        <js-module src="www/ios/device.js" name="device-ios">
+            <merges target="intel.xdk.device" />
+        </js-module>
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="IntelXDKDevice">
+                <param name="ios-package" value="XDKDevice" />
+            </feature>
+        </config-file>
+
+        <!-- Allow iOS6-style programatic status bar hiding in iOS7. -->
+        <config-file target="*-Info.plist" parent="UIViewControllerBasedStatusBarAppearance">
+            <false/>
+        </config-file>
+    
+        <header-file src="src/ios/XDKDevice.h" />
+        <source-file src="src/ios/XDKDevice.m" />
+        <resource-file src="src/ios/remote_close.png" />
+
+        <framework src="AVFoundation.framework" />
+        <framework src="CoreVideo.framework" />
+        <framework src="MessageUI.framework" />
+        <framework src="QuartzCore.framework" />
+        <framework src="SystemConfiguration.framework" />
+        <framework src="libiconv.dylib" />
+    
+    </platform>
+
+</plugin>

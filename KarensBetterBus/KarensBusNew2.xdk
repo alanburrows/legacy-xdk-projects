@@ -1,0 +1,455 @@
+{
+  "project": {
+    "projectSettingsVersion": "2.0.0",
+    "creationData": {
+      "type": "Demo",
+      "projectTypeName": "com.intel.xdk.projecttype.jsapp",
+      "src": "https://edge-intel.s3.amazonaws.com/jsapp/production/release-2014-ww37/template-single-view/sample.zip",
+      "projectGuid": "6e655a73-99bf-44df-a381-c15acaab3a7a",
+      "lastModifiedDate": 1455807190440,
+      "creationDate": 1415176994050
+    },
+    "sourceDirectory": "www",
+    "cordovaPluginsDirectory": "plugins",
+    "startFile": "index.html",
+    "projectFiles": {},
+    "projectDirectories": {
+      "www/xdk": {
+        "settings": {
+          "project": {
+            "XDK-generated": "true"
+          }
+        }
+      }
+    },
+    "libraries": [],
+    "cordovaPlugins": [
+      {
+        "id": "cordova-plugin-splashscreen",
+        "version": "2.1.0",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {},
+        "originType": "cordova.io",
+        "origin": "cordova-plugin-splashscreen",
+        "permissions": {},
+        "dependsOn": [],
+        "dependedBy": [],
+        "topLevel": true,
+        "checksum": "170efb68",
+        "gitref": "",
+        "name": "Splashscreen",
+        "description": "Cordova Splashscreen Plugin"
+      },
+      {
+        "id": "cordova-plugin-geolocation",
+        "version": "1.0.1",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {},
+        "originType": "cordova.io",
+        "origin": "cordova-plugin-geolocation",
+        "permissions": {
+          "android:name": [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            "android.permission.ACCESS_FINE_LOCATION"
+          ]
+        },
+        "dependsOn": [],
+        "dependedBy": [],
+        "topLevel": true,
+        "checksum": "2cb3083e",
+        "gitref": "",
+        "name": "Geolocation",
+        "description": "Cordova Geolocation Plugin"
+      },
+      {
+        "id": "intel.xdk.cache",
+        "selectedState": "Included",
+        "data": {},
+        "paramvals": {},
+        "originType": "repo",
+        "origin": "https://github.com/01org/cordova-plugin-intel-xdk-cache.git",
+        "gitref": "r1.2.3",
+        "subdir": ".",
+        "permissions": {},
+        "dependsOn": [],
+        "dependedBy": [],
+        "topLevel": true,
+        "checksum": "756ad158",
+        "version": "1.2.3",
+        "name": "Intel XDK Cache",
+        "description": "Intel XDK Cache Plugin"
+      },
+      {
+        "id": "intel.xdk.device",
+        "name": "Intel XDK Device",
+        "version": "2.0.1",
+        "originType": "repo",
+        "origin": "https://github.com/01org/cordova-plugin-intel-xdk-device.git",
+        "gitref": "r2.0.1",
+        "subdir": ".",
+        "paramvals": {},
+        "sourceLocation": "plugins/intel.xdk.device",
+        "selectedState": "Included",
+        "checksum": "67ee7871",
+        "dependsOn": [],
+        "topLevel": true,
+        "permissions": {
+          "android:name": [
+            "android.permission.ACCESS_WIFI_STATE",
+            "android.permission.READ_PHONE_STATE",
+            "android.permission.WAKE_LOCK"
+          ]
+        },
+        "description": "Intel XDK Device Plugin",
+        "data": {},
+        "dependedBy": []
+      }
+    ],
+    "serviceMethods": [],
+    "buildConfigurations": {
+      "Android": {
+        "platform_": "android",
+        "runtime_": "Cordova 3.x",
+        "name_": "Android",
+        "preferences_": {
+          "android-minSdkVersion": "10",
+          "android-targetSdkVersion": "19",
+          "Orientation": "portrait",
+          "android-signed": true
+        },
+        "isActive_": true,
+        "appName_": "Karen's Bus 2",
+        "appID_": "com.cupinco.karensbus",
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [
+            "*"
+          ],
+          "navigation": []
+        },
+        "icons_": [
+          {
+            "relPath": "css/images/LaunchIcon.png",
+            "density": "xhdpi",
+            "height": 96,
+            "width": 96
+          },
+          {
+            "relPath": "css/images/LaunchIcon2.png",
+            "density": "hdpi",
+            "height": 72,
+            "width": 72
+          },
+          {
+            "relPath": "css/images/LaunchIcon3.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          },
+          {
+            "relPath": "css/images/LaunchIcon4.png",
+            "density": "ldpi",
+            "height": 36,
+            "width": 36
+          }
+        ],
+        "splashes_": [
+          {
+            "relPath": "css/images/SmartPhoneSplashScreen480640.jpg",
+            "density": "hdpi",
+            "height": 640,
+            "width": 480,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "css/images/SmartPhoneSplashScreen720960.jpg",
+            "density": "xhdpi",
+            "height": 960,
+            "width": 720,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "css/images/SmartPhoneSplashScreen320470.jpg",
+            "density": "mdpi",
+            "height": 470,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "css/images/SmartPhoneSplashScreen320426.jpg",
+            "density": "ldpi",
+            "height": 426,
+            "width": 320,
+            "orientation": "portrait"
+          }
+        ],
+        "addlPermissions_": "ACCESS_FINE_LOCATION;ACCESS_COARSE_LOCATION",
+        "excludedLibraries_": "",
+        "iosProvs_": [],
+        "cordovaCLIVersion_": "5.1.1",
+        "appVersion_": "1.0.3.0",
+        "appVersionCode_": "60",
+        "crosswalkVersion_": "stable",
+        "appAuthor_": "Cupinco",
+        "appDescription_": "The app to help Karen find the bus!"
+      },
+      "Android-Crosswalk": {
+        "platform_": "android",
+        "runtime_": "Crosswalk with Cordova 3.x",
+        "name_": "Android-Crosswalk",
+        "preferences_": {
+          "android-minSdkVersion": "14",
+          "android-targetSdkVersion": "19",
+          "Orientation": "portrait",
+          "Fullscreen": true
+        },
+        "isActive_": true,
+        "appName_": "Karen's Better Bus",
+        "appID_": "com.cupinco.karensbus",
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [
+            "*"
+          ],
+          "navigation": []
+        },
+        "icons_": [
+          {
+            "relPath": "css/images/LaunchIcon.png",
+            "density": "xhdpi",
+            "height": 96,
+            "width": 96
+          },
+          {
+            "relPath": "css/images/LaunchIcon2.png",
+            "density": "hdpi",
+            "height": 72,
+            "width": 72
+          },
+          {
+            "relPath": "css/images/LaunchIcon3.png",
+            "density": "mdpi",
+            "height": 48,
+            "width": 48
+          },
+          {
+            "relPath": "css/images/LaunchIcon4.png",
+            "density": "ldpi",
+            "height": 36,
+            "width": 36
+          }
+        ],
+        "splashes_": [
+          {
+            "relPath": "css/images/SmartPhoneSplashScreen320426.png",
+            "density": "ldpi",
+            "height": 426,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "css/images/SmartPhoneSplashScreen320470.png",
+            "density": "mdpi",
+            "height": 470,
+            "width": 320,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "css/images/SmartPhoneSplashScreen480640.png",
+            "density": "hdpi",
+            "height": 640,
+            "width": 480,
+            "orientation": "portrait"
+          },
+          {
+            "relPath": "css/images/SmartPhoneSplashScreen720960.png",
+            "density": "xhdpi",
+            "height": 960,
+            "width": 720,
+            "orientation": "portrait"
+          }
+        ],
+        "addlPermissions_": "ACCESS_FINE_LOCATION;ACCESS_COARSE_LOCATION",
+        "excludedLibraries_": "",
+        "iosProvs_": [],
+        "cordovaCLIVersion_": "5.1.1",
+        "appVersion_": "1.0.3.1",
+        "appVersionCode_": "61",
+        "crosswalkVersion_": "15",
+        "appAuthor_": "Cupinco",
+        "appDescription_": "The app to help Karen find the bus!"
+      },
+      "iOS": {
+        "platform_": "ios",
+        "runtime_": "Cordova 3.x",
+        "name_": "iOS",
+        "preferences_": {
+          "ios-target": "5",
+          "ios-configuration": "adhoc"
+        },
+        "isActive_": true,
+        "appName_": "KarensBusNew2",
+        "appID_": "not.yet.specified",
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "iosProvs_": [],
+        "cordovaCLIVersion_": "5.1.1",
+        "appVersion_": "0.0.1"
+      },
+      "Windows8": {
+        "platform_": "windows8",
+        "runtime_": "Cordova 3.x",
+        "name_": "Windows8",
+        "preferences_": {
+          "windows-publisher-id": "555de0c7-911a-4480-8995-f78ceb5d035d",
+          "windows-publisher-display-name": "Cupinco",
+          "Fullscreen": false,
+          "Orientation": "portrait"
+        },
+        "isActive_": true,
+        "appName_": "Karen's Bus",
+        "appID_": "com.cupinco.karensbus",
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [
+            "*"
+          ],
+          "intents": [],
+          "navigation": []
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "ID_CAP_LOCATION",
+        "excludedLibraries_": "",
+        "iosProvs_": [],
+        "cordovaCLIVersion_": "5.1.1",
+        "appVersion_": "1.0.2.56",
+        "appDescription_": "The app to help Karen find the bus!",
+        "appAuthor_": "Cupinco"
+      },
+      "WebApp": {
+        "platform_": "webapp",
+        "runtime_": "W3C",
+        "name_": "WebApp",
+        "preferences_": {},
+        "isActive_": false,
+        "appName_": "KarensBusNew2",
+        "appID_": "not.yet.specified",
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [],
+          "intents": [],
+          "navigation": []
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1"
+      },
+      "Firefox": {
+        "platform_": "firefoxos",
+        "runtime_": "W3C on Firefox OS",
+        "name_": "Firefox",
+        "preferences_": {},
+        "isActive_": false,
+        "appName_": "KarensBusNew2",
+        "appID_": "not.yet.specified",
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [],
+          "intents": [],
+          "navigation": []
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1"
+      },
+      "Chrome": {
+        "platform_": "chromeos",
+        "runtime_": "W3C on Chrome OS",
+        "name_": "Chrome",
+        "preferences_": {},
+        "isActive_": false,
+        "appName_": "KarensBusNew2",
+        "appID_": "not.yet.specified",
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [],
+          "intents": [],
+          "navigation": []
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1"
+      },
+      "Facebook": {
+        "platform_": "facebook",
+        "runtime_": "W3C on Facebook",
+        "name_": "Facebook",
+        "preferences_": {},
+        "isActive_": false,
+        "appName_": "KarensBusNew2",
+        "appID_": "not.yet.specified",
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [],
+          "intents": [],
+          "navigation": []
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.1"
+      },
+      "WP81": {
+        "platform_": "wp81",
+        "runtime_": "Cordova 3.x",
+        "name_": "WP81",
+        "preferences_": {},
+        "isActive_": true,
+        "appName_": "KarensBusNew2",
+        "appID_": "not.yet.specified",
+        "appAccess_": {
+          "mode": "legacy",
+          "network": [],
+          "intents": [],
+          "navigation": []
+        },
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "0.0.0.1",
+        "cordovaCLIVersion_": "5.1.1"
+      }
+    },
+    "gameAssetDirectory": "asset",
+    "gameMetadata": {},
+    "testDirectory": "test",
+    "projectTags": []
+  }
+}
