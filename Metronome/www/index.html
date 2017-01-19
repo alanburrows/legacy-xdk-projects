@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        @-ms-viewport { width: 100vw ; zoom: 100% ; }
+        @viewport { width: 100vw ; zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; }
+        @viewport { user-zoom: fixed ; }
+    </style>
+    <link rel="stylesheet" href="css/app.css">
+    
+    <script src="js/include.js" language="JavaScript" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="content">
+        <div>
+            <table>
+                <tr>
+                    <td>Tempo:</td>
+                    <td colspan="2"><input type="range" min="40" max="240" value="120" step="1" onchange="showTempo(this.value)"/></td>
+                    <td><span id="tempo">120</span></td>
+                </tr>
+                <tr>
+                    <td>Volume:</td>
+                    <td colspan="2"><input type="range" min="0" max="100" value="10" step="1" onchange="showVolume(this.value)"/></td>
+                    <td><span id="volume">10</span></td>
+                </tr>
+                <tr>
+                    <td>Pattern:</td>
+                    <td colspan="2">
+                        <select id="beatPattern" onchange="changeRhythm(this.selectedIndex)">
+                            <option>Custom</option>
+                            <option selected>Bulerias</option>
+                            <option>Soleá</option>
+                            <option>Alegría</option>
+                            <option>Bulerias por 6</option>
+                            <option>Tangos/Tientos</option>
+                            <option>Fandango de Huelva</option>
+                        </select>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr id="customSettings">
+                    <td>Beats:</td>
+                    <td>
+                        <select id="beats" onchange="changeBeats(this.value)">
+                            <option>3</option>
+                            <option>4</option>
+                            <option>6</option>
+                            <option>8</option>
+                            <option selected>12</option>
+                        </select>
+                    </td>
+                    <td>Start:</td>
+                    <td>
+                        <select id="firstBeat" onchange="changeFirstBeat(this.value)">
+                            <option>1</option>
+                            <option>6</option>
+                            <option selected>12</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div>	
+            <table>
+                <tr><td><hr/></td></tr>
+            </table>
+        </div>
+
+        <div>	
+            <table>
+                <tr>
+                    <td>12:</td>
+                    <td>
+                        <select id="11" onchange="changeSound(11)">
+                            <option>-</option>
+                            <option selected>Low</option>
+                            <option>Snare</option>
+                            <option>Clap</option>
+                        </select>
+                    </td>
+                    <td>1:</td>
+                    <td>
+                        <select id="0" onchange="changeSound(0)">
+                            <option>-</option>
+                            <option>Low</option>
+                            <option selected>Snare</option>
+                            <option>Clap</option>
+                        </select>
+                    </td>
+                    <td>2:</td>
+                    <td>
+                        <select id="1" onchange="changeSound(1)">
+                            <option>-</option>
+                            <option>Low</option>
+                            <option selected>Snare</option>
+                            <option>Clap</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3:</td>
+                    <td>
+                        <select id="2" onchange="changeSound(2)">
+                            <option>-</option>
+                            <option selected>Low</option>
+                            <option>Snare</option>
+                            <option>Clap</option>
+                        </select>
+                    </td>
+                    <td>4:</td>
+                    <td>
+                        <select id="3" onchange="changeSound(3)">
+                            <option>-</option>
+                            <option>Low</option>
+                            <option selected>Snare</option>
+                            <option>Clap</option>
+                        </select>
+                    </td>
+                    <td>5:</td>
+                    <td>
+                        <select id="4" onchange="changeSound(4)">
+                            <option>-</option>
+                            <option>Low</option>
+                            <option selected>Snare</option>
+                            <option>Clap</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6:</td>
+                    <td>
+                        <select id="5" onchange="changeSound(5)">
+                            <option>-</option>
+                            <option selected>Low</option>
+                            <option>Snare</option>
+                            <option>Clap</option>
+                        </select>
+                    </td>
+                    <td>7:</td>
+                    <td>
+                        <select id="6" onchange="changeSound(6)">
+                            <option>-</option>
+                            <option>Low</option>
+                            <option selected>Snare</option>
+                            <option>Clap</option>
+                        </select>
+                    </td>
+                    <td>8:</td>
+                    <td>
+                        <select id="7" onchange="changeSound(7)">
+                            <option>-</option>
+                            <option selected>Low</option>
+                            <option>Snare</option>
+                            <option>Clap</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9:</td>
+                    <td>
+                        <select id="8" onchange="changeSound(8)">
+                            <option>-</option>
+                            <option>Low</option>
+                            <option selected>Snare</option>
+                            <option>Clap</option>
+                        </select>
+                    </td>
+                    <td>10:</td>
+                    <td>
+                        <select id="9" onchange="changeSound(9)">
+                            <option>-</option>
+                            <option selected>Low</option>
+                            <option>Snare</option>
+                            <option>Clap</option>
+                        </select>
+                    </td>
+                    <td>11:</td>
+                    <td>
+                        <select id="10" onchange="changeSound(10)">
+                            <option>-</option>
+                            <option>Low</option>
+                            <option selected>Snare</option>
+                            <option>Clap</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="navbar">        
+        <table style="width:100%;padding:0px;margin:0px">
+            <tr><td><hr/></td></tr>
+            <tr style="height:55px">			
+                <button style="width:80px;height:45px" onclick="playSound()">Play</button>
+                <button style="width:80px;height:45px" onclick="stopSound()">Stop</button>
+            </tr>
+        </table>
+    </div>
+		
+    <script src="intelxdk.js"></script>
+    <script src="cordova.js"></script> 
+    <script src="xhr.js"></script>     
+
+    <script src="js/app.js"></script>
+    <script src="js/init-app.js"></script>
+    <script src="js/init-dev.js"></script>
+
+</body>
+</html>
